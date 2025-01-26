@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// filepath: /C:/Users/ldick/repositorios_github/newPortfolio/vite.config.js
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "/newPortfolio/",
   plugins: [react()],
-})
+});
