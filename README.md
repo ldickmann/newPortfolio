@@ -8,10 +8,10 @@ Bem-vindo ao repositório do meu novo portfólio! 🎨💻
 
 ## 🏗️ Tecnologias Utilizadas
 - React + Vite ⚛️🚀
-- Quasar Framework 🎨
 - JavaScript (ES6+)
 - HTML5 & CSS3
 - React Icons 🖼️
+- React Router DOM
 
 ## 📋 Funcionalidades Planejadas
 ✔️ Página inicial interativa
