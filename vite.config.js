@@ -1,3 +1,4 @@
+// filepath: /c:/Users/ldick/repositorios_github/newPortfolio/vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
