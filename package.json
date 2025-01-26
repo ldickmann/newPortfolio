@@ -1,6 +1,7 @@
+// filepath: /C:/Users/ldick/repositorios_github/newPortfolio/package.json
 {
   "name": "newportfolio",
-  "homepage": "https://github.com/ldickmann/newPorfolio",
+  "homepage": "https://ldickmann.github.io/newPortfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
