@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
@@ -27,7 +26,6 @@ const ParticlesComponent = () => {
     });
   }, []);
 
-  // eslint-disable-next-line no-unused-vars
   const particlesLoaded = (container) => {};
 
   return (
