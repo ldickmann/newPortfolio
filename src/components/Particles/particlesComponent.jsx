@@ -27,6 +27,7 @@ const ParticlesComponent = () => {
     });
   }, []);
 
+  // eslint-disable-next-line no-unused-vars
   const particlesLoaded = (container) => {};
 
   return (

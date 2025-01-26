@@ -17,7 +17,7 @@ const TitleStyles = styled.h1`
   font-family: var(--font-banner);
   font-size: 6rem;
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;

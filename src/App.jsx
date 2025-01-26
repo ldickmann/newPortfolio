@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
-import ParticlesComponent from "./components/Particles/particlesComponent";
+// import ParticlesComponent from "./components/Particles/particlesComponent";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ParticlesComponent />
+      {/* <ParticlesComponent /> */}
       {!sidebarOpen && (
         <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
       )}
