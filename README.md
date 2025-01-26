@@ -12,6 +12,7 @@ Bem-vindo ao repositório do meu novo portfólio! 🎨💻
 - HTML5 & CSS3
 - React Icons 🖼️
 - React Router DOM
+- Styled Components
 
 ## 📋 Funcionalidades Planejadas
 ✔️ Página inicial interativa
