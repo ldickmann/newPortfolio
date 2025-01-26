@@ -104,13 +104,10 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
               <NavLinks to="/">Home</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/about-me">Sobre Mim</NavLinks>
+              <NavLinks to="/about-me">Sobre</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="/projects">Projetos</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/contact">Contato</NavLinks>
             </NavItem>
           </NavList>
         )}

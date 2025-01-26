@@ -1,23 +1,22 @@
 import styled from "styled-components";
 import Card from "../components/Card";
 import ParticlesComponent from "../components/Particles/particlesComponent";
+import Contacts from "../components/Contacts";
 
 const Container = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ParticlesWrapper = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
+  flex: 1;
+  height: 100vh;
 `;
 
 const Overlay = styled.div`
-  display: grid;
-  place-items: center;
-  z-index: 999;
-  margin-top: -39rem;
+  flex: 0 0 auto;
+  margin-top: -24rem;
+  padding: 0 10rem;
 `;
 
 const Home = () => {
@@ -25,10 +24,11 @@ const Home = () => {
     <Container>
       <ParticlesWrapper>
         <ParticlesComponent />
-        <Overlay>
-          <Card />
-        </Overlay>
       </ParticlesWrapper>
+      <Contacts />
+      <Overlay>
+        <Card />
+      </Overlay>
     </Container>
   );
 };
