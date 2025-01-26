@@ -1,7 +1,7 @@
 # 🚀 New Portfolio - Dev Luks
 
 Bem-vindo ao repositório do meu novo portfólio! 🎨💻
-Este projeto está atualmente em desenvolvimento e será a nova vitrine dos meus trabalhos e experiências como desenvolvedor full stack.
+- Este projeto está atualmente em desenvolvimento e será a nova vitrine dos meus trabalhos e experiências como desenvolvedor full stack.
 
 ## 📌 Status do Projeto
 🛠️ Em construção...
@@ -20,7 +20,7 @@ Este projeto está atualmente em desenvolvimento e será a nova vitrine dos meus
 ✔️ Animações e efeitos modernos
 
 ## 🎯 Objetivo do Projeto
-Este portfólio tem como objetivo apresentar minhas habilidades, projetos e experiências de maneira dinâmica e profissional.
+- Este portfólio tem como objetivo apresentar minhas habilidades, projetos e experiências de maneira dinâmica e profissional.
 
 ## 📅 Próximos Passos
 - [ ] Finalizar estruturação e/ou codificação das páginas Sobre e Projetos
