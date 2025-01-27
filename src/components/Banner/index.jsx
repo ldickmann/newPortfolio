@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10rem 0rem 0rem 7rem;
+  padding: 10rem 0rem 0rem 20rem;
 `;
 
 const Header = styled.h1`
@@ -44,10 +44,9 @@ const TitleFooter = styled.h1`
 
 const ContainerImage = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
   width: 100%;
-  height: 100%;
+  padding: 0rem 20rem 0rem 0rem;
 `;
 
 const Banner = () => {

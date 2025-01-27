@@ -8,7 +8,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  object-fit: cover;
+  width: 80%;
 `;
 
 /**

@@ -15,7 +15,7 @@ const CardStyles = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 12rem;
+  padding: 2rem 0rem;
   background-color: #433d3d;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.723);

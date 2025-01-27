@@ -26,7 +26,7 @@ const Container = styled.div`
 const Overlay = styled.div`
   flex: 0 0 auto;
   margin-top: -24rem;
-  padding: 0 10rem;
+  padding: 0 8rem;
 `;
 
 const Home = () => {
