@@ -54,7 +54,7 @@ Please change the parent <Route path="${F}"> to <Route path="${F==="/"?"*":`${F}
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 12rem;
+  padding: 2rem 0rem;
   background-color: #433d3d;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.723);
@@ -120,7 +120,7 @@ Please change the parent <Route path="${F}"> to <Route path="${F==="/"?"*":`${F}
   justify-content: center;
   align-items: center;
 `,eg=de.img`
-  object-fit: cover;
+  width: 80%;
 `,Qd=({src:l,alt:u})=>H.jsx(bm,{children:H.jsx(eg,{src:l,alt:u})});Qd.propTypes={src:Mt.string.isRequired,alt:Mt.string.isRequired};const tg=de.div`
   display: flex;
   flex-direction: column;
@@ -146,7 +146,7 @@ Please change the parent <Route path="${F}"> to <Route path="${F==="/"?"*":`${F}
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10rem 0rem 0rem 7rem;
+  padding: 10rem 0rem 0rem 20rem;
 `,og=de.h1`
   color: var(--color-white);
   font-size: 1.5rem;
@@ -163,17 +163,16 @@ Please change the parent <Route path="${F}"> to <Route path="${F==="/"?"*":`${F}
   font-weight: 700;
 `,sg=de.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
   width: 100%;
-  height: 100%;
+  padding: 0rem 20rem 0rem 0rem;
 `,cg=()=>H.jsxs(rg,{children:[H.jsxs(lg,{children:[H.jsxs(ig,{children:[H.jsx(og,{children:"Hi there! I'm"}),H.jsx(Kd,{text:"Lucas Dickmann"})]}),H.jsx(ug,{children:H.jsx(ag,{children:"Web Developer"})})]}),H.jsx(sg,{children:H.jsx(Qd,{src:"./images/perfil.png",alt:"Lucas Dickmann"})})]}),fg=de.div`
   display: flex;
   flex-direction: column;
 `,dg=de.div`
   flex: 0 0 auto;
   margin-top: -24rem;
-  padding: 0 10rem;
+  padding: 0 8rem;
 `,pg=()=>H.jsxs(fg,{children:[H.jsx(cg,{}),H.jsx(Gm,{}),H.jsx(dg,{children:H.jsx(Hm,{})})]}),hg=de.section`
   padding: 2rem 0;
   background-color: var(--color-dark);
