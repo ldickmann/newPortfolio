@@ -7,10 +7,10 @@
   --color-white-medium: #d9d9d9;
   --color-black: #000000;
   --color-black-medium: #0d0d0d;
-
   --color-beige: #a68f7b;
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
