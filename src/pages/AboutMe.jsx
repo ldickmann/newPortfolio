@@ -3,7 +3,6 @@ import styled from "styled-components";
 const AboutMeStyles = styled.section`
   padding: 2rem 0;
   background-color: var(--color-dark);
-  color: #fff;
 `;
 
 const AboutMe = () => {

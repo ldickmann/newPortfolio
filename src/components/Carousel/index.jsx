@@ -10,8 +10,8 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  pointer-events: none; // Desativa a interatividade
-  outline: none; // Remove a borda ao clicar
+  pointer-events: none;
+  outline: none;
 `;
 
 const CarouselContainer = styled.div`

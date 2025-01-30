@@ -9,6 +9,10 @@ const BannerContainer = styled.div`
   background-color: var(--color-black);
   height: 70vh;
   padding: 0rem 10rem 0rem 10rem;
+
+  @media (max-width: 769px) {
+    padding: 0rem 2rem;
+  }
 `;
 
 const ContainerText = styled.div`
