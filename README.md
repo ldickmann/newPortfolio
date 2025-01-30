@@ -25,8 +25,8 @@ Bem-vindo ao repositório do meu novo portfólio! 🎨💻
 
 ## 📅 Próximos Passos
 - [ ] Finalizar estruturação e/ou codificação das páginas Sobre e Projetos
+- [ ] Finalizar codificação dos componentes
 - [ ] Implementar animações e responsividade
-- [ ] Adicionar conteúdo e otimizar SEO
 - [ ] Publicar versão final 🚀
 
 ## 📢 Contato
