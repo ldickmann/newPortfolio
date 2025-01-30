@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
@@ -8,7 +8,7 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -27,19 +27,12 @@ function AppContent({ toggleSidebar, sidebarOpen }) {
 
   return (
     <>
-      {!isParticlesRoute && !sidebarOpen && (
+      {!isParticlesRoute && (
         <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
       )}
-      {!isParticlesRoute && sidebarOpen && (
-        <Sidebar toggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
-      )}
+      <Sidebar isOpen={sidebarOpen} />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home toggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
-          }
-        />
+        <Route path="/" element={<Home toggleSidebar={toggleSidebar} />} />
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<div>Página não encontrada...</div>} />

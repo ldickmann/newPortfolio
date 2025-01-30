@@ -33,9 +33,10 @@ const SidebarLink = styled(Link)`
   color: white;
   font-family: "Silkscreen", serif;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 1.5rem;
   width: 90%;
   transition: opacity 0.3s ease, color 0.3s ease, padding 0.3s ease;
+  text-decoration: none;
 
   &:hover {
     opacity: 0.8;

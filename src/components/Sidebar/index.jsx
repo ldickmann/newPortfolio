@@ -1,24 +1,22 @@
 import styled from "styled-components";
-import { FaTimes } from "react-icons/fa";
-import PropTypes from "prop-types";
 import NavLinks from "../NavLinks";
+import PropTypes from "prop-types";
 
 const SidebarContainer = styled.div`
+  display: ${(props) => (props.$isOpen ? "block" : "none")};
+  position: fixed;
+  top: 0;
+  left: ${({ $isOpen }) => ($isOpen ? "0" : "-250px")};
   height: 100%;
+  width: 250px;
   background-color: #000;
-  transition: width 0.3s, opacity 0.3s;
+  transition: left 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
   gap: 1rem;
-
-  &.open {
-    .sidebarLink {
-      opacity: 1;
-      color: white;
-    }
-  }
+  z-index: 1000;
 `;
 
 const SidebarHeader = styled.div`
@@ -28,29 +26,34 @@ const SidebarHeader = styled.div`
   padding: 10px;
 `;
 
-const CloseIcon = styled.div`
-  align-self: flex-end;
-  margin-right: 3vh;
-  margin-top: 3vh;
-  cursor: pointer;
+const StyledNavLink = styled(NavLinks)`
+  text-decoration: none;
+  font-size: 0.875rem;
 `;
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <SidebarContainer className={isOpen ? "open" : ""}>
-      <SidebarHeader>
-        <CloseIcon onClick={toggleSidebar}>
-          <FaTimes />
-        </CloseIcon>
-      </SidebarHeader>
-      <NavLinks isSidebar />
+    <SidebarContainer $isOpen={isOpen}>
+      <SidebarHeader></SidebarHeader>
+      {isOpen && (
+        <>
+          <StyledNavLink to="/" isSidebar>
+            Home
+          </StyledNavLink>
+          <StyledNavLink to="/about-me" isSidebar>
+            Sobre
+          </StyledNavLink>
+          <StyledNavLink to="/projects" isSidebar>
+            Projetos
+          </StyledNavLink>
+        </>
+      )}
     </SidebarContainer>
   );
 };
 
 Sidebar.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  toggleSidebar: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

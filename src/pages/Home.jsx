@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Card from "../components/Card";
-// import Contacts from "../components/Contacts";
 import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
 import ParticlesComponent from "../components/Particles/particlesComponent";
@@ -18,25 +17,20 @@ const Overlay = styled.div`
   z-index: 999;
 `;
 
-const Home = ({ toggleSidebar, isSidebarOpen }) => {
+const Home = ({ toggleSidebar }) => {
   const [showHome, setShowHome] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowHome(true);
     }, 4500);
-
     return () => clearTimeout(timer);
   }, []);
 
   return showHome ? (
     <>
       <Container>
-        <Navbar
-          isHome
-          toggleSidebar={toggleSidebar}
-          isSidebarOpen={isSidebarOpen}
-        />
+        <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={false} />
         <Banner />
         <Overlay>
           <Card />
@@ -50,7 +44,6 @@ const Home = ({ toggleSidebar, isSidebarOpen }) => {
 
 Home.propTypes = {
   toggleSidebar: PropTypes.func.isRequired,
-  isSidebarOpen: PropTypes.bool.isRequired,
 };
 
 export default Home;

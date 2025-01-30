@@ -26,50 +26,36 @@ const NavItem = styled.li`
 
 const ToggleIcon = styled.div`
   cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: auto;
-  margin-top: 10px;
   display: none;
 
-  @media (max-width: 600px) {
+  @media (max-width: 550px) {
     display: block;
+    margin-left: auto;
   }
 `;
 
-const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
-  const [prevPos, setPrevPos] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+const Navbar = ({ toggleSidebar }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 550);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentPos = window.pageYOffset;
-      setPrevPos(currentPos);
-    };
-
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600);
+      setIsMobile(window.innerWidth <= 550);
     };
 
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [prevPos]);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header>
       <Navigation>
-        {isMobile ? (
+        {isMobile && (
           <ToggleIcon onClick={toggleSidebar}>
             <FaBars size={40} color="white" />
           </ToggleIcon>
-        ) : (
-          <NavList className={isSidebarOpen ? "open" : ""}>
+        )}
+        {!isMobile && (
+          <NavList>
             <NavItem>
               <NavLinks to="/">Home</NavLinks>
             </NavItem>
