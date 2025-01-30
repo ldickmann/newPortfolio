@@ -9,6 +9,11 @@ const CardSection = styled.section`
   justify-content: center;
   gap: 2rem;
   padding: 2rem 3rem;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const CardContainer = styled.div`

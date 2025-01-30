@@ -64,6 +64,10 @@ const ContainerImage = styled.div`
   justify-content: end;
   width: 100%;
   gap: 4rem;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 const Divider = styled.div`
