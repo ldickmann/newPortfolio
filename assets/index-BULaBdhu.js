@@ -251,6 +251,10 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   justify-content: end;
   width: 100%;
   gap: 4rem;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `,OS=Re.div`
   width: 1px;
   height: 506px;
@@ -300,6 +304,11 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   justify-content: center;
   gap: 2rem;
   padding: 2rem 3rem;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `,eC=Re.div`
   display: flex;
   flex-direction: column;
