@@ -149,8 +149,8 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   justify-content: center;
   align-items: center;
   height: 100%;
-  pointer-events: none; // Desativa a interatividade
-  outline: none; // Remove a borda ao clicar
+  pointer-events: none;
+  outline: none;
 `,ab=De.div`
   .slick-slide {
     display: flex;
@@ -211,6 +211,10 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   background-color: var(--color-black);
   height: 70vh;
   padding: 0rem 10rem 0rem 10rem;
+
+  @media (max-width: 769px) {
+    padding: 0rem 2rem;
+  }
 `,yb=De.div`
   display: flex;
   flex-direction: column;
@@ -274,9 +278,7 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
 `,Rg=({toggleSidebar:n})=>{const[e,i]=X.useState(!1);return X.useEffect(()=>{const o=setTimeout(()=>{i(!0)},4500);return()=>clearTimeout(o)},[]),e?se.jsx(se.Fragment,{children:se.jsxs(WC,{children:[se.jsx(Af,{toggleSidebar:n,isSidebarOpen:!1}),se.jsx(bb,{}),se.jsx(UC,{children:se.jsx(cb,{})})]})}):se.jsx(HC,{})};Rg.propTypes={toggleSidebar:At.func.isRequired};const qC=De.section`
   padding: 2rem 0;
   background-color: var(--color-dark);
-  color: #fff;
 `,VC=()=>se.jsx(qC,{children:se.jsx("h2",{children:"About Me"})}),QC=De.section`
   padding: 2rem 0;
   background-color: var(--color-dark);
-  color: #fff;
 `,GC=()=>se.jsx(QC,{children:se.jsx("h2",{children:"Projects"})});function YC(){const[n,e]=X.useState(!1),i=()=>{e(!n)};return se.jsx(Kw,{basename:"/newPortfolio",children:se.jsx(zg,{toggleSidebar:i,sidebarOpen:n})})}function zg({toggleSidebar:n,sidebarOpen:e}){const o=Zn().pathname==="/";return se.jsxs(se.Fragment,{children:[!o&&se.jsx(Af,{toggleSidebar:n,isSidebarOpen:e}),se.jsx(Iv,{isOpen:e}),se.jsxs(Pw,{children:[se.jsx(Jo,{path:"/",element:se.jsx(Rg,{toggleSidebar:n})}),se.jsx(Jo,{path:"/about-me",element:se.jsx(VC,{})}),se.jsx(Jo,{path:"/projects",element:se.jsx(GC,{})}),se.jsx(Jo,{path:"*",element:se.jsx("div",{children:"Página não encontrada..."})})]})]})}zg.propTypes={toggleSidebar:At.func.isRequired,sidebarOpen:At.bool.isRequired};D1.createRoot(document.getElementById("root")).render(se.jsx(X.StrictMode,{children:se.jsx(YC,{})}));
