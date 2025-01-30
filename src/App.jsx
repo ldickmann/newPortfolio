@@ -16,12 +16,16 @@ function App() {
 
   return (
     <BrowserRouter basename="/newPortfolio">
-      <AppContent toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
+      <AppContent
+        toggleSidebar={toggleSidebar}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
     </BrowserRouter>
   );
 }
 
-function AppContent({ toggleSidebar, sidebarOpen }) {
+function AppContent({ toggleSidebar, sidebarOpen, setSidebarOpen }) {
   const location = useLocation();
   const isParticlesRoute = location.pathname === "/";
 
@@ -30,7 +34,7 @@ function AppContent({ toggleSidebar, sidebarOpen }) {
       {!isParticlesRoute && (
         <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
       )}
-      <Sidebar isOpen={sidebarOpen} />
+      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
       <Routes>
         <Route path="/" element={<Home toggleSidebar={toggleSidebar} />} />
         <Route path="/about-me" element={<AboutMe />} />
@@ -44,6 +48,7 @@ function AppContent({ toggleSidebar, sidebarOpen }) {
 AppContent.propTypes = {
   toggleSidebar: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
+  setSidebarOpen: PropTypes.func.isRequired,
 };
 
 export default App;

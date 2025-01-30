@@ -22,12 +22,12 @@ const TitleContainer = styled.div`
 const TitleStyles = styled.h1`
   color: var(--color-green);
   font-family: var(--font-banner);
-  font-size: 3rem;
   margin: 1rem 0rem;
   text-transform: uppercase;
   overflow: hidden;
   white-space: pre-wrap;
   border-right: 0.15em solid var(--color-green);
+  font-size: 6rem;
   ${({ $length }) => css`
     animation: ${typing($length)} 1.5s steps($length, end),
       ${blink} 0.9s step-end infinite;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ImageComponent from "../ImageComponent";
 import Title from "../Title";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const BannerContainer = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ const BannerContainer = styled.div`
   align-items: center;
   background-color: var(--color-black);
   height: 70vh;
-  padding: 0rem 10rem 0rem 10rem;
+  padding: 0rem 10rem 6rem 10rem;
 
   @media (max-width: 769px) {
     padding: 0rem 2rem;
@@ -45,10 +46,30 @@ const TitleFooter = styled.h1`
   font-weight: 700;
 `;
 
+const ContainerSocialMedia = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-green);
+  border-radius: 20px;
+  gap: 1rem;
+  padding: 2rem 0rem 2rem 0rem;
+  margin-top: 3rem;
+  width: 4rem;
+`;
+
 const ContainerImage = styled.div`
   display: flex;
   justify-content: end;
   width: 100%;
+  gap: 4rem;
+`;
+
+const Divider = styled.div`
+  width: 1px;
+  height: 506px;
+  background-color: var(--color-green);
 `;
 
 const Banner = () => {
@@ -62,9 +83,18 @@ const Banner = () => {
         <FooterContainer>
           <TitleFooter>Web Developer</TitleFooter>
         </FooterContainer>
+        <ContainerSocialMedia>
+          <a href="https://www.linkedin.com/in/lucas-dickmann">
+            <FaLinkedin size={30} color={"#000000"} />
+          </a>
+          <a href="https://www.github.com/ldickmann">
+            <FaGithub size={30} color={"#000000"} />
+          </a>
+        </ContainerSocialMedia>
       </ContainerText>
       <ContainerImage>
         <ImageComponent src={"./images/perfil.png"} alt={"Lucas Dickmann"} />
+        <Divider />
       </ContainerImage>
     </BannerContainer>
   );

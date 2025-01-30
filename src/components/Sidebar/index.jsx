@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import NavLinks from "../NavLinks";
 import PropTypes from "prop-types";
@@ -31,9 +32,25 @@ const StyledNavLink = styled(NavLinks)`
   font-size: 0.875rem;
 `;
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
+  const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsOpen]);
+
   return (
-    <SidebarContainer $isOpen={isOpen}>
+    <SidebarContainer ref={sidebarRef} $isOpen={isOpen}>
       <SidebarHeader></SidebarHeader>
       {isOpen && (
         <>
@@ -54,6 +71,7 @@ const Sidebar = ({ isOpen }) => {
 
 Sidebar.propTypes = {
   isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

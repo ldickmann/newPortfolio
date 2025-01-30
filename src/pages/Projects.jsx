@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const ProjectsStyles = styled.section`
-  padding: 2rem 0;
   background-color: var(--color-dark);
 `;
 
