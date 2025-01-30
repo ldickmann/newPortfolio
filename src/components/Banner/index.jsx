@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import Title from "../TitleLetter";
 import ImageComponent from "../ImageComponent";
 import Title from "../Title";
 

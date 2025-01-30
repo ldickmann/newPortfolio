@@ -2,21 +2,19 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./particles.json";
-import Title from "../Title";
 import styled from "styled-components";
+import TitleLetter from "../TitleLetter";
 
-const Text = styled.h1`
+const TitleContainer = styled.div`
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
 `;
 
 const ParticlesComponent = () => {
   const [init, setInit] = useState(false);
+  // const particlesLoaded = (container) => {};
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -26,19 +24,18 @@ const ParticlesComponent = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {};
-
   return (
     <>
       {init && (
         <>
           <Particles
             id="tsparticles"
-            particlesLoaded={particlesLoaded}
+            particlesLoaded={() => {}}
             options={particlesConfig}
           />
-          <Text>Hi there! I'm Lucas E. Dickmann</Text>
-          <Title text="Dev Luks" />
+          <TitleContainer>
+            <TitleLetter text="Dev Luks" />
+          </TitleContainer>
         </>
       )}
     </>
