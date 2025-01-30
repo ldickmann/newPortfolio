@@ -8,7 +8,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 90%;
+  width: ${(props) => props.width || "90%"};
 `;
 
 /**
@@ -20,10 +20,10 @@ const Image = styled.img`
  *
  * @returns {JSX.Element} The image component.
  */
-const ImageComponent = ({ src, alt }) => {
+const ImageComponent = ({ src, alt, width }) => {
   return (
     <ImageContainer>
-      <Image src={src} alt={alt} />
+      <Image src={src} alt={alt} width={width} />
     </ImageContainer>
   );
 };
@@ -31,6 +31,7 @@ const ImageComponent = ({ src, alt }) => {
 ImageComponent.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  width: PropTypes.string,
 };
 
 export default ImageComponent;
