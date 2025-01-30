@@ -6,52 +6,22 @@ import NavLinks from "../NavLinks";
 
 const Navigation = styled.nav`
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin: 1rem 2rem 1rem 0rem;
-  background-color: transparent;
-  position: absolute;
+  padding: 1rem 2rem;
+  background-color: var(--color-black);
   width: 100%;
-  top: 0;
-  z-index: 1;
-
-  @media (min-width: 600px) {
-    display: flex;
-  }
+  box-sizing: border-box;
 `;
 
 const NavList = styled.ul`
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: 600px) {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(41, 33, 33, 0.9);
-    padding-top: 50px;
-    transition: opacity 0.3s ease;
-
-    &.open {
-      display: flex;
-    }
-  }
-
-  @media (min-width: 600px) {
-    display: flex;
-    margin-top: 0;
-  }
+  width: 100%;
+  transition: opacity 0.3s ease;
 `;
 
 const NavItem = styled.li`
   margin: 0 10px;
-
-  @media (max-width: 600px) {
-    margin: 20px 0;
-    text-align: center;
-  }
 `;
 
 const ToggleIcon = styled.div`

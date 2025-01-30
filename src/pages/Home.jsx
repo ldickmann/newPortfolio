@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Card from "../components/Card";
-import ParticlesComponent from "../components/Particles/particlesComponent";
-import Contacts from "../components/Contacts";
+// import Contacts from "../components/Contacts";
 import Banner from "../components/Banner";
-import { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import ParticlesComponent from "../components/Particles/particlesComponent";
 
 const Container = styled.div`
   display: flex;
@@ -12,32 +14,43 @@ const Container = styled.div`
 
 const Overlay = styled.div`
   flex: 0 0 auto;
-  margin-top: -24rem;
-  padding: 0 8rem;
+  margin-top: -5rem;
+  z-index: 999;
 `;
 
-const Home = () => {
+const Home = ({ toggleSidebar, isSidebarOpen }) => {
   const [showHome, setShowHome] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowHome(true);
-    }, 5000); // Tempo em milissegundos (5 segundos)
+    }, 4500);
 
-    return () => clearTimeout(timer); // Limpa o timer se o componente desmontar
+    return () => clearTimeout(timer);
   }, []);
 
   return showHome ? (
-    <Container>
-      <Banner />
-      <Contacts />
-      <Overlay>
-        <Card />
-      </Overlay>
-    </Container>
+    <>
+      <Container>
+        <Navbar
+          isHome
+          toggleSidebar={toggleSidebar}
+          isSidebarOpen={isSidebarOpen}
+        />
+        <Banner />
+        <Overlay>
+          <Card />
+        </Overlay>
+      </Container>
+    </>
   ) : (
     <ParticlesComponent />
   );
+};
+
+Home.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
+  isSidebarOpen: PropTypes.bool.isRequired,
 };
 
 export default Home;

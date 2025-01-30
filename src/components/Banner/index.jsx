@@ -4,35 +4,35 @@ import Title from "../Title";
 
 const BannerContainer = styled.div`
   display: flex;
-  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
   height: 70vh;
+  padding: 0rem 10rem 0rem 10rem;
 `;
 
 const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding: 10rem 0rem 0rem 20rem;
 `;
 
 const Header = styled.h1`
   color: var(--color-white);
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 0%;
 `;
 
 const FooterContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 0rem 0rem 0rem 7rem;
 `;
 
 const TitleFooter = styled.h1`
@@ -45,7 +45,6 @@ const ContainerImage = styled.div`
   display: flex;
   justify-content: end;
   width: 100%;
-  padding: 0rem 20rem 0rem 0rem;
 `;
 
 const Banner = () => {

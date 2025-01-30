@@ -14,7 +14,6 @@ const TitleContainer = styled.div`
 
 const ParticlesComponent = () => {
   const [init, setInit] = useState(false);
-  // const particlesLoaded = (container) => {};
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
