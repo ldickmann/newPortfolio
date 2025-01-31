@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
 import ParticlesComponent from "../components/Particles/particlesComponent";
-import MiniBio from "../components/MiniBio";
+import MiniBioCard from "../components/MiniBioCard";
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ const Home = ({ toggleSidebar }) => {
           <Card />
         </Overlay>
       </Container>
-      <MiniBio />
+      <MiniBioCard />
     </>
   ) : (
     <ParticlesComponent />

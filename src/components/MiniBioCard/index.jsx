@@ -42,7 +42,7 @@ const BioText = styled.p`
   color: var(--color-white-medium);
 `;
 
-const MiniBio = () => {
+const MiniBioCard = () => {
   return (
     <BioContainer>
       <BioTitle>Sobre Mim</BioTitle>
@@ -60,4 +60,4 @@ const MiniBio = () => {
   );
 };
 
-export default MiniBio;
+export default MiniBioCard;
