@@ -11,7 +11,7 @@ const TitleContainer = styled.div`
 const TitleStyles = styled.h1`
   color: var(--color-green);
   font-family: var(--font-banner);
-  font-size: 3rem;
+  font-size: 2.25rem;
   margin: 1rem 0rem;
   text-transform: uppercase;
   overflow: hidden;

@@ -14,6 +14,11 @@ const BannerContainer = styled.div`
   @media (max-width: 769px) {
     padding: 0rem 2rem;
   }
+
+  @media (max-width: 430px) {
+    padding: 0rem 1rem;
+    height: 85vh;
+  }
 `;
 
 const ContainerText = styled.div`
@@ -57,6 +62,10 @@ const ContainerSocialMedia = styled.div`
   padding: 2rem 0rem 2rem 0rem;
   margin-top: 3rem;
   width: 4rem;
+
+  @media (max-width: 430px) {
+    margin-top: 1rem;
+  }
 `;
 
 const ContainerImage = styled.div`
