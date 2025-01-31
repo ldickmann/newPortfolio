@@ -26,14 +26,15 @@ const CardContainer = styled.div`
   margin: 8px;
   background-color: var(--color-grey);
   color: var(--color-green);
-  padding: 0rem 0rem 4rem 0rem;
-  box-shadow: rgba(166, 143, 123, 1) 0px 4px 8px 0px,
+  padding: 0rem 0rem 2rem 0rem;
+  box-shadow: rgba(166, 143, 123, 1) 0px 4px 10px 0px,
     rgba(166, 143, 123, 1) 0px 4px 15px 0px;
   overflow: hidden;
 `;
 
 const CardTitle = styled.h3`
-  font-size: 26px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 `;
 
 const IconContainer = styled.div`
@@ -41,37 +42,53 @@ const IconContainer = styled.div`
   gap: 3rem;
 `;
 
+const IconLink = styled.a`
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: var(--color-green-dark);
+    transform: scale(1.1);
+  }
+`;
+
+const ProjectCard = ({ src, alt, title, githubLink, deployLink }) => (
+  <CardContainer>
+    <ImageComponent src={src} alt={alt} width="100%" />
+    <CardTitle>{title}</CardTitle>
+    <IconContainer>
+      <IconLink href={githubLink} target="_blank" rel="noopener noreferrer">
+        <FaGithub size={28} />
+      </IconLink>
+      {deployLink && (
+        <IconLink href={deployLink} target="_blank" rel="noopener noreferrer">
+          <FaExternalLinkAlt size={28} />
+        </IconLink>
+      )}
+    </IconContainer>
+  </CardContainer>
+);
+
 const CardMini = ({ cards }) => {
   return (
     <CardSection>
       {cards.map((card, index) => (
-        <CardContainer key={index}>
-          <ImageComponent src={card.src} alt={card.alt} width="100%" />
-          <CardTitle>{card.title}</CardTitle>
-          <IconContainer>
-            <a href={card.githubLink} target="_blank" rel="noopener noreferrer">
-              <FaGithub size={28} color="white" />
-            </a>
-            <a href={card.deployLink} target="_blank" rel="noopener noreferrer">
-              <FaExternalLinkAlt size={28} color="white" />
-            </a>
-          </IconContainer>
-        </CardContainer>
+        <ProjectCard key={index} {...card} />
       ))}
     </CardSection>
   );
 };
 
+ProjectCard.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  githubLink: PropTypes.string.isRequired,
+  deployLink: PropTypes.string,
+};
+
 CardMini.propTypes = {
-  cards: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      githubLink: PropTypes.string.isRequired,
-      deployLink: PropTypes.string,
-    })
-  ).isRequired,
+  cards: PropTypes.arrayOf(PropTypes.shape(ProjectCard.propTypes)).isRequired,
 };
 
 export default CardMini;
