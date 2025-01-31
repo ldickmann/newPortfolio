@@ -35,6 +35,7 @@ const CardContainer = styled.div`
 const CardTitle = styled.h3`
   font-size: 20px;
   font-family: "Roboto", sans-serif;
+  padding-inline: 1rem;
 `;
 
 const IconContainer = styled.div`

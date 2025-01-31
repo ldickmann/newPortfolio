@@ -16,9 +16,15 @@ const divideIntoGroups = (array, groupSize) => {
 const Projects = () => {
   const cards = [
     {
+      src: "./images/DjangoSGE.png",
+      alt: "Django SGE | Full Stack App - Django, Django REST & Bootstrap",
+      title: "Django SGE - Sistema de Gerenciamento de Estoque",
+      githubLink: "https://github.com/ldickmann/djangoSGE",
+    },
+    {
       src: "./images/ola-mundo.png",
-      alt: "Ola mundo APP",
-      title: "Projeto Olá Mundo",
+      alt: "Ola mundo - React App",
+      title: "Projeto Olá Mundo | Front-end App - React",
       githubLink:
         "https://github.com/ldickmann/ReactG7-ONE/tree/main/ola-mundo",
       deployLink: "https://react-ola-mundo-one.vercel.app/",
@@ -26,21 +32,28 @@ const Projects = () => {
     {
       src: "./images/space-app.png",
       alt: "Space APP",
-      title: "Projeto Space App",
+      title: "Projeto Space | Front-end App - React",
       githubLink:
         "https://github.com/ldickmann/ReactG7-ONE/tree/main/space-app",
       deployLink: "https://react-space-app-one.vercel.app/",
     },
     {
+      src: "./images/alura-flix-app.png",
+      alt: "AluraFlix | Front-end App - React",
+      title: "Projeto AluraFlix | Front-end App - React",
+      githubLink: "https://github.com/ldickmann/AluraFlix-ONE",
+      deployLink: "https://alura-flix-one-blond.vercel.app/",
+    },
+    {
       src: "./images/LukFlixApp.png",
-      alt: "LukFlix APP",
-      title: "Projeto LukFlix",
+      alt: "LukFlix App",
+      title: "Projeto LukFlix | Front-end - Django App",
       githubLink: "https://github.com/ldickmann/LukFlix-App",
     },
     {
       src: "./images/pong.png",
       alt: "Pong Game",
-      title: "Projeto Pong Game",
+      title: "Projeto Pong Game - Javascript",
       githubLink:
         "https://github.com/ldickmann/FrontEndG7-ONE/tree/main/ChatGPTeJS",
       deployLink: "https://ldickmann.github.io/FrontEndG7-ONE/ChatGPTeJS/",
