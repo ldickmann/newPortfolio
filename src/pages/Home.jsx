@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const Overlay = styled.div`
   flex: 0 0 auto;
-  margin-top: -5rem;
+  margin-top: -4.5rem;
   z-index: 999;
 `;
 
