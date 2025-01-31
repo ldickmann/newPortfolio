@@ -12,7 +12,7 @@ const BannerContainer = styled.div`
   padding: 0rem 10rem 6rem 10rem;
 
   @media (max-width: 769px) {
-    padding-left: 2rem;
+    padding-inline: 2rem;
   }
 
   @media (max-width: 430px) {

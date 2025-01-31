@@ -16,11 +16,7 @@ function App() {
 
   return (
     <BrowserRouter basename="/newPortfolio">
-      <AppContent
-        toggleSidebar={toggleSidebar}
-        sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-      />
+      <AppContent toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
     </BrowserRouter>
   );
 }
