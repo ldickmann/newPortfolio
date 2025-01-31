@@ -199,7 +199,7 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
 `,vS=Re.h1`
   color: var(--color-green);
   font-family: var(--font-banner);
-  font-size: 3rem;
+  font-size: 2.25rem;
   margin: 1rem 0rem;
   text-transform: uppercase;
   overflow: hidden;
@@ -214,6 +214,11 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
 
   @media (max-width: 769px) {
     padding: 0rem 2rem;
+  }
+
+  @media (max-width: 430px) {
+    padding: 0rem 1rem;
+    height: 85vh;
   }
 `,xS=Re.div`
   display: flex;
@@ -246,6 +251,10 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   padding: 2rem 0rem 2rem 0rem;
   margin-top: 3rem;
   width: 4rem;
+
+  @media (max-width: 430px) {
+    margin-top: 1rem;
+  }
 `,PS=Re.div`
   display: flex;
   justify-content: end;
