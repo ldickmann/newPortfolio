@@ -213,12 +213,12 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   padding: 0rem 10rem 6rem 10rem;
 
   @media (max-width: 769px) {
-    padding: 0rem 2rem;
+    padding-left: 2rem;
   }
 
   @media (max-width: 430px) {
     padding: 0rem 1rem;
-    height: 85vh;
+    height: 100vh;
   }
 `,xS=Re.div`
   display: flex;
