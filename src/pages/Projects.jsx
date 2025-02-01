@@ -1,9 +1,36 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import CardMini from "../components/CardMini";
 
 const ProjectsStyles = styled.section`
   background-color: var(--color-black);
 `;
+
+// Custom hook for responsive breakpoints
+const useResponsiveCards = () => {
+  const [cardsPerGroup, setCardsPerGroup] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 551) {
+        setCardsPerGroup(2);
+      } else if (width <= 900) {
+        setCardsPerGroup(2);
+      } else {
+        setCardsPerGroup(3);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return cardsPerGroup;
+};
 
 const divideIntoGroups = (array, groupSize) => {
   const groups = [];
@@ -14,6 +41,8 @@ const divideIntoGroups = (array, groupSize) => {
 };
 
 const Projects = () => {
+  const cardsPerGroup = useResponsiveCards();
+
   const cards = [
     {
       src: "./images/djangoSGE.png",
@@ -80,7 +109,7 @@ const Projects = () => {
     },
   ];
 
-  const cardGroups = divideIntoGroups(cards, 3);
+  const cardGroups = divideIntoGroups(cards, cardsPerGroup);
 
   return (
     <ProjectsStyles>

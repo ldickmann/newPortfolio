@@ -7,7 +7,6 @@ const CardSection = styled.section`
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  padding: 2rem 3rem 0rem 3rem;
 
   @media (max-width: 550px) {
     flex-direction: column;
@@ -21,7 +20,7 @@ const CardContainer = styled.div`
   align-items: center;
   border: 1px solid #000;
   border-radius: 8px;
-  margin: 1rem 2rem;
+  margin: 2rem 2rem;
   background-color: var(--color-grey);
   color: var(--color-green);
   padding: 0rem 0rem 2rem 0rem;
