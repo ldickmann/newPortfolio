@@ -8,7 +8,7 @@ const CardSection = styled.section`
   flex-wrap: nowrap;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 0rem 3rem;
 
   @media (max-width: 550px) {
     flex-direction: column;
@@ -23,12 +23,12 @@ const CardContainer = styled.div`
   justify-content: center;
   border: 1px solid #000;
   border-radius: 8px;
-  margin: 8px;
+  margin: 0.5rem;
   background-color: var(--color-grey);
   color: var(--color-green);
   padding: 0rem 0rem 2rem 0rem;
-  box-shadow: rgba(166, 143, 123, 1) 0px 4px 10px 0px,
-    rgba(166, 143, 123, 1) 0px 4px 15px 0px;
+  box-shadow: rgba(34, 63, 35, 1) 0px 4px 10px 0px,
+    rgba(34, 63, 35, 1) 0px 4px 15px 0px;
   overflow: hidden;
 `;
 
