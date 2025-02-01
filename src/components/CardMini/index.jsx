@@ -1,13 +1,12 @@
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import ImageComponent from "../ImageComponent";
 
 const CardSection = styled.section`
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 2rem;
   padding: 2rem 3rem 0rem 3rem;
 
   @media (max-width: 550px) {
@@ -20,21 +19,20 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   border: 1px solid #000;
   border-radius: 8px;
-  margin: 0.5rem;
+  margin: 1rem 2rem;
   background-color: var(--color-grey);
   color: var(--color-green);
   padding: 0rem 0rem 2rem 0rem;
   box-shadow: rgba(34, 63, 35, 1) 0px 4px 10px 0px,
     rgba(34, 63, 35, 1) 0px 4px 15px 0px;
   overflow: hidden;
+  max-width: 450px;
 `;
 
 const CardTitle = styled.h3`
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
   padding-inline: 1rem;
 `;
 

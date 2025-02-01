@@ -11,7 +11,7 @@ const FooterStyles = styled.footer`
 const Footer = () => {
   return (
     <FooterStyles>
-      <p>&copy; 2021 - Lucas Dickmann</p>
+      <p>Copyright &copy; 2025 | Developer Lucas Elias Dickmann</p>
     </FooterStyles>
   );
 };

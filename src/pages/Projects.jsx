@@ -22,6 +22,19 @@ const Projects = () => {
       githubLink: "https://github.com/ldickmann/djangoSGE",
     },
     {
+      src: "./images/alura-flix-app.png",
+      alt: "AluraFlix | Front-end App - React",
+      title: "Aplicação AluraFlix | Front-end App - React",
+      githubLink: "https://github.com/ldickmann/AluraFlix-ONE",
+      deployLink: "https://alura-flix-one-blond.vercel.app/",
+    },
+    {
+      src: "./images/luk-flix-app.png",
+      alt: "LukFlix App",
+      title: "Projeto LukFlix | Front-end App - Django",
+      githubLink: "https://github.com/ldickmann/LukFlix-App",
+    },
+    {
       src: "./images/meteora-app.png",
       alt: "Meteora App | Front End App",
       title: "Aplicação Meteora | Front-end App - React",
@@ -38,12 +51,6 @@ const Projects = () => {
       deployLink: "https://react-ola-mundo-one.vercel.app/",
     },
     {
-      src: "./images/luk-flix-app.png",
-      alt: "LukFlix App",
-      title: "Projeto LukFlix | Front-end App - Django",
-      githubLink: "https://github.com/ldickmann/LukFlix-App",
-    },
-    {
       src: "./images/flix-API.png",
       alt: "Flix API",
       title: "FlixAPI | Back-end API - Django REST Framework",
@@ -56,13 +63,6 @@ const Projects = () => {
       githubLink:
         "https://github.com/ldickmann/ReactG7-ONE/tree/main/space-app",
       deployLink: "https://react-space-app-one.vercel.app/",
-    },
-    {
-      src: "./images/alura-flix-app.png",
-      alt: "AluraFlix | Front-end App - React",
-      title: "Aplicação AluraFlix | Front-end App - React",
-      githubLink: "https://github.com/ldickmann/AluraFlix-ONE",
-      deployLink: "https://alura-flix-one-blond.vercel.app/",
     },
     {
       src: "./images/django-cars-app.png",
