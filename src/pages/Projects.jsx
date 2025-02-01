@@ -16,18 +16,38 @@ const divideIntoGroups = (array, groupSize) => {
 const Projects = () => {
   const cards = [
     {
-      src: "./images/DjangoSGE.png",
+      src: "./images/djangoSGE.png",
       alt: "Django SGE | Full Stack App - Django, Django REST & Bootstrap",
       title: "Django SGE - Sistema de Gerenciamento de Estoque",
       githubLink: "https://github.com/ldickmann/djangoSGE",
     },
     {
+      src: "./images/meteora-app.png",
+      alt: "Meteora App | Front End App",
+      title: "Aplicação Meteora | Front-end App - React",
+      githubLink:
+        "https://github.com/ldickmann/ReactG7-ONE/tree/main/react-context-api",
+      deployLink: "https://react-context-api-meteora.vercel.app/",
+    },
+    {
       src: "./images/ola-mundo.png",
       alt: "Ola mundo - React App",
-      title: "Projeto Olá Mundo | Front-end App - React",
+      title: "Aplicação Olá Mundo | Front-end App - React",
       githubLink:
         "https://github.com/ldickmann/ReactG7-ONE/tree/main/ola-mundo",
       deployLink: "https://react-ola-mundo-one.vercel.app/",
+    },
+    {
+      src: "./images/luk-flix-app.png",
+      alt: "LukFlix App",
+      title: "Projeto LukFlix | Front-end App - Django",
+      githubLink: "https://github.com/ldickmann/LukFlix-App",
+    },
+    {
+      src: "./images/flix-API.png",
+      alt: "Flix API",
+      title: "FlixAPI | Back-end API - Django REST Framework",
+      githubLink: "https://github.com/ldickmann/FlixApi",
     },
     {
       src: "./images/space-app.png",
@@ -40,15 +60,15 @@ const Projects = () => {
     {
       src: "./images/alura-flix-app.png",
       alt: "AluraFlix | Front-end App - React",
-      title: "Projeto AluraFlix | Front-end App - React",
+      title: "Aplicação AluraFlix | Front-end App - React",
       githubLink: "https://github.com/ldickmann/AluraFlix-ONE",
       deployLink: "https://alura-flix-one-blond.vercel.app/",
     },
     {
-      src: "./images/LukFlixApp.png",
-      alt: "LukFlix App",
-      title: "Projeto LukFlix | Front-end - Django App",
-      githubLink: "https://github.com/ldickmann/LukFlix-App",
+      src: "./images/django-cars-app.png",
+      alt: "Django Cars App",
+      title: "Aplicação Front-end Django Cars | Django e Python",
+      githubLink: "https://github.com/ldickmann/djangoCars",
     },
     {
       src: "./images/pong.png",

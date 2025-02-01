@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,7 +17,11 @@ function App() {
 
   return (
     <BrowserRouter basename="/newPortfolio">
-      <AppContent toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <AppContent
+        toggleSidebar={toggleSidebar}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
     </BrowserRouter>
   );
 }
@@ -37,6 +42,7 @@ function AppContent({ toggleSidebar, sidebarOpen, setSidebarOpen }) {
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<div>Página não encontrada...</div>} />
       </Routes>
+      <Footer />
     </>
   );
 }
